@@ -20,7 +20,7 @@
     - Responsive for Desktop > Mobiles
 
 ### Tools: 
-    - HTML, CSS (Sass/Less and Bootstrap), JavaScript, React, etc.
+    - HTML, CSS (Sass/Less and Bootstrap), JavaScript.
 
 ### Design Notes
     `Figma drafts & Screenshots`
