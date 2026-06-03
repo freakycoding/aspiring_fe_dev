@@ -14,10 +14,9 @@ body {
     margin: 0 auto;
 }
 
-section {
-    background-color: aqua;
-    width: 100%;
-
+img {
+    max-inline-size: 100%;
+    display: block;
 }
 
 .aboutMe {
@@ -25,50 +24,36 @@ section {
     justify-content: center;
     gap: 2rem;
     padding: 2rem;
-    min-width: 100vh;
 }
 
 @media(max-width: 768px) {
 
     .aboutMe {
         flex-direction: column;
-        flex: 1;
-        width: 100%;
+        padding: 0 1rem;
+        gap: 1rem;
     }
 
-    article {
-        flex-direction: column;
+    .aboutContent {
+        flex: 1;
     }
 }
 
-article {
+
+.aboutContent {
+    /* max-width: 40rem; */
+    background: #ffffff;
+    border-radius: 10px;
     flex: 1;
 }
 
-img {
-    border-radius: 10px;
-    flex: 1.2;
-
-    max-width: 100%;
-    display: block;
-    height: auto;
-
-}
-
-.aboutText {
-    max-width: 40rem;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 0 2rem;
-}
-
-.aboutText h3 {
-    font-size: clamp(2rem, 3vw, 1.25rem);
-    padding: 2rem 0;
-}
-
-.aboutText p {
+.aboutContent h3 {
+    font-size: clamp(2rem, 3vw, 1rem);
     padding: 1rem 0;
+}
+
+.aboutContent p {
+    padding: .5rem 0;
     font-size: 1.01rem;
 }
 
