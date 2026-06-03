@@ -1,18 +1,98 @@
 /* resets */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-form{
-    background-color: #d9d9d9;
-    max-width: 600px;
-    /* min-height: 100vh; */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: aqua;
+    width: 100%;
+
+}
+
+.aboutMe {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    min-width: 100vh;
+}
+
+@media(max-width: 768px) {
+
+    .aboutMe {
+        flex-direction: column;
+        flex: 1;
+        width: 100%;
+    }
+
+    article {
+        flex-direction: column;
+    }
+}
+
+article {
+    flex: 1;
+}
+
+img {
+    border-radius: 10px;
+    flex: 1.2;
+
+    max-width: 100%;
+    display: block;
+    height: auto;
+
+}
+
+.aboutText {
+    max-width: 40rem;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 0 2rem;
+}
+
+.aboutText h3 {
+    font-size: clamp(2rem, 3vw, 1.25rem);
+    padding: 2rem 0;
+}
+
+.aboutText p {
+    padding: 1rem 0;
+    font-size: 1.01rem;
+}
+
+.social p {
+    font-weight: 600;
+    border-bottom: 2pt solid #d3d3d3;
+}
+
+.social div {
+    padding: 1rem 0;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
     align-items: center;
-    /* justify-content: center; */
-    gap: 20px;
+
+}
+
+.fa-solid,
+.fa-brands {
+    color: rgb(170, 170, 170);
+}
+
+.fa-solid:hover,
+.fa-brands:hover {
+    color: rgb(135, 206, 206);
+    cursor: pointer;
 }
