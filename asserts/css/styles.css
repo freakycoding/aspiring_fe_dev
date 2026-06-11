@@ -102,6 +102,10 @@ header {
     /* min-height: 100vh; */
 }
 
+.heroContent p{
+    text-align: left;
+}
+
 .btn {
     padding: 10px 13px;
     font-family: Sans-serif;
@@ -110,6 +114,15 @@ header {
     border: none;
     display: block;
     color: var(--navyColor);
+    transition: all .3s ease;
+}
+
+.btn:hover {
+    background: var(--navyColor);
+    color: var(--color-neutral);
+    transform: scale(1.05);
+
+    box-shadow: 0 0 15px var(--color-primary);
 }
 
 nav {
@@ -179,6 +192,46 @@ nav .navBar {
 
 }
 
+/***** About Section in Banner *****/
+#about {
+    padding: var(--sectionPadding);
+
+}
+
+#about h2 {
+    text-align: center;
+    color: var(--navyColor);
+}
+
+.flex {
+    color: var(--footerColor);
+    border: 3px solid green;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 2rem;
+    padding: var(--cardPadding);
+    flex-wrap: wrap;
+}
+
+.flex-text {
+    max-width:37.5rem ;
+}
+
+.btn-group {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.flex-box {
+    border: 3px solid green;
+    flex: 1 1 40%;
+
+}
+
+/***** End About Section in Banner *****/
+
 span {
     color: var(--color-accent);
     font-weight: 700;
@@ -199,19 +252,18 @@ span {
 /***** End About Section *****/
 
 /***** Skills Section *****/
-.skills{
+.skills {
     background: var(--navyColor);
 }
-.skills h2, p {
+
+.skills h2,
+p {
     /* color: var(--headerColor); */
     text-align: center;
 }
 
 
 .grid {
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
-    /* padding: var(--cardPadding); */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -219,21 +271,36 @@ span {
     text-align: center;
 }
 
-.grid .box{
-    
+.grid .box {
     place-content: center;
-    border: 1px solid red;
+    transform: translateX(-50px, 50px);
+    margin: var(--cardPadding);
+    border: 2px solid rgba(231, 231, 231, 0.196);
+    border-radius: 50%;
+    padding: var(--cardPadding);
+    /* background-color: hsla(103, 100%, 48%, 0.471); */
 }
 
-.box{
-    transform: translateX(-50px, 50px);
-    height: 100px;
-    width: 100px;
-    /* margin: 0 auto; */
-    margin: var(--cardPadding);
-    background-color: #f1eef0;
-    border-radius: var(--cardRadius);
+/* .box:hover{
+    
+} */
+
+.box:hover {
+    animation: pulse 0.6s infinite alternate;
 }
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        border-color: #0077b6;
+    }
+
+    to {
+        transform: scale(1.2);
+        border-color: #00b4d8;
+    }
+}
+
 /***** End Skills Section *****/
 
 /***** Footer Section *****/
@@ -267,7 +334,7 @@ li {
 
 /***** Responsive Section *****/
 @media(max-width: 768px) {
-    .navBar {
+    nav .navBar {
         display: none;
     }
 
@@ -287,6 +354,15 @@ li {
 
     .aboutContent h3 {
         text-align: center;
+    }
+
+    .flex {
+        flex-direction: column;
+        padding: var(--cardPadding);
+    }
+
+    .flex-text p{
+        text-align: left;
     }
 
     footer {
